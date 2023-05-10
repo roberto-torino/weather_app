@@ -1,0 +1,36 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "formazione_bwapps",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "formazione_bwapps (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "formazione_bwapps (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "Code Generator",
+      "cwd": ".",
+      "request": "launch",
+      "program": ".dart_tool/build/entrypoint/build.dart",
+      "type": "dart",
+      "args": [
+        "watch",
+        "-d"
+      ]
+    }
+  ]
+}
