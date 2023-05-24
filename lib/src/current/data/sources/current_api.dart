@@ -4,7 +4,6 @@ import '../../../../core/base/json.dart';
 
 class CurrentApi {
   CurrentApi(this.client);
-
   final Dio client;
 
   Future<Json> current(String q) async {
