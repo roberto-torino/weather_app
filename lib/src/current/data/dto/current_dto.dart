@@ -1,27 +1,39 @@
+import 'package:formazione_bwapps/core/base/json.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'air_quality_dto.dart';
+import 'condition_dto.dart';
+
 part 'current_dto.freezed.dart';
+part 'current_dto.g.dart';
 
 @freezed
 class CurrentDto with _$CurrentDto {
   const factory CurrentDto({
-    required LocationDto location,
-    // TODO: completare la classe CurrentDto con gli altri
-    // oggetti presenti in current_dto.json
-    // (ad esempio "current", "wind_mph", "wind_kph", etc.)
+    int? lastUpdatedEpoch,
+    DateTime? lastUpdated,
+    double? tempC,
+    double? tempF,
+    int? isDay,
+    ConditionDto? condition,
+    double? windMph,
+    double? windKph,
+    int? windDegree,
+    String? windDir,
+    int? pressureMb,
+    double? pressureIn,
+    int? precipMm,
+    int? precipIn,
+    int? humidity,
+    int? cloud,
+    double? feelslikeC,
+    double? feelslikeF,
+    int? visKm,
+    int? visMiles,
+    int? uv,
+    double? gustMph,
+    double? gustKph,
+    AirQualityDto? airQuality,
   }) = _CurrentDto;
-}
-
-@freezed
-class LocationDto with _$LocationDto {
-  const factory LocationDto({
-    required String name,
-    required String region,
-    required String country,
-    required double lat,
-    required double lon,
-    required String tzId,
-    required int localtimeEpoch,
-    required DateTime localtime,
-  }) = _LocationDto;
+  factory CurrentDto.fromJson(Json json) => _$CurrentDtoFromJson(json);
 }
