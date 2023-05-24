@@ -6,6 +6,9 @@ part 'dio.g.dart';
 @riverpod
 Dio httpClient(HttpClientRef ref) {
   return Dio(
-    BaseOptions(baseUrl: 'https://api.weatherapi.com/v1'),
+    BaseOptions(
+      baseUrl: 'https://api.weatherapi.com/v1',
+      queryParameters: {'key': 'your-key-here'},
+    ),
   );
 }

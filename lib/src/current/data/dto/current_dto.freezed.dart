@@ -32,15 +32,15 @@ mixin _$CurrentDto {
   double? get tempF => throw _privateConstructorUsedError;
   int? get isDay => throw _privateConstructorUsedError;
   double? get windMph => throw _privateConstructorUsedError;
-  int? get pressureMb => throw _privateConstructorUsedError;
+  double? get pressureMb => throw _privateConstructorUsedError;
   double? get pressureIn => throw _privateConstructorUsedError;
-  int? get precipMm => throw _privateConstructorUsedError;
-  int? get precipIn => throw _privateConstructorUsedError;
+  double? get precipMm => throw _privateConstructorUsedError;
+  double? get precipIn => throw _privateConstructorUsedError;
   int? get cloud => throw _privateConstructorUsedError;
   double? get feelslikeF => throw _privateConstructorUsedError;
-  int? get visKm => throw _privateConstructorUsedError;
-  int? get visMiles => throw _privateConstructorUsedError;
-  int? get uv => throw _privateConstructorUsedError;
+  double? get visKm => throw _privateConstructorUsedError;
+  double? get visMiles => throw _privateConstructorUsedError;
+  double? get uv => throw _privateConstructorUsedError;
   double? get gustMph => throw _privateConstructorUsedError;
   double? get gustKph => throw _privateConstructorUsedError;
   AirQualityDto? get airQuality => throw _privateConstructorUsedError;
@@ -70,15 +70,15 @@ abstract class $CurrentDtoCopyWith<$Res> {
       double? tempF,
       int? isDay,
       double? windMph,
-      int? pressureMb,
+      double? pressureMb,
       double? pressureIn,
-      int? precipMm,
-      int? precipIn,
+      double? precipMm,
+      double? precipIn,
       int? cloud,
       double? feelslikeF,
-      int? visKm,
-      int? visMiles,
-      int? uv,
+      double? visKm,
+      double? visMiles,
+      double? uv,
       double? gustMph,
       double? gustKph,
       AirQualityDto? airQuality});
@@ -177,7 +177,7 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
       pressureMb: freezed == pressureMb
           ? _value.pressureMb
           : pressureMb // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       pressureIn: freezed == pressureIn
           ? _value.pressureIn
           : pressureIn // ignore: cast_nullable_to_non_nullable
@@ -185,11 +185,11 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
       precipMm: freezed == precipMm
           ? _value.precipMm
           : precipMm // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       precipIn: freezed == precipIn
           ? _value.precipIn
           : precipIn // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       cloud: freezed == cloud
           ? _value.cloud
           : cloud // ignore: cast_nullable_to_non_nullable
@@ -201,15 +201,15 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
       visKm: freezed == visKm
           ? _value.visKm
           : visKm // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       visMiles: freezed == visMiles
           ? _value.visMiles
           : visMiles // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       uv: freezed == uv
           ? _value.uv
           : uv // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       gustMph: freezed == gustMph
           ? _value.gustMph
           : gustMph // ignore: cast_nullable_to_non_nullable
@@ -267,15 +267,15 @@ abstract class _$$_CurrentDtoCopyWith<$Res>
       double? tempF,
       int? isDay,
       double? windMph,
-      int? pressureMb,
+      double? pressureMb,
       double? pressureIn,
-      int? precipMm,
-      int? precipIn,
+      double? precipMm,
+      double? precipIn,
       int? cloud,
       double? feelslikeF,
-      int? visKm,
-      int? visMiles,
-      int? uv,
+      double? visKm,
+      double? visMiles,
+      double? uv,
       double? gustMph,
       double? gustKph,
       AirQualityDto? airQuality});
@@ -374,7 +374,7 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
       pressureMb: freezed == pressureMb
           ? _value.pressureMb
           : pressureMb // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       pressureIn: freezed == pressureIn
           ? _value.pressureIn
           : pressureIn // ignore: cast_nullable_to_non_nullable
@@ -382,11 +382,11 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
       precipMm: freezed == precipMm
           ? _value.precipMm
           : precipMm // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       precipIn: freezed == precipIn
           ? _value.precipIn
           : precipIn // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       cloud: freezed == cloud
           ? _value.cloud
           : cloud // ignore: cast_nullable_to_non_nullable
@@ -398,15 +398,15 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
       visKm: freezed == visKm
           ? _value.visKm
           : visKm // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       visMiles: freezed == visMiles
           ? _value.visMiles
           : visMiles // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       uv: freezed == uv
           ? _value.uv
           : uv // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       gustMph: freezed == gustMph
           ? _value.gustMph
           : gustMph // ignore: cast_nullable_to_non_nullable
@@ -480,23 +480,23 @@ class _$_CurrentDto implements _CurrentDto {
   @override
   final double? windMph;
   @override
-  final int? pressureMb;
+  final double? pressureMb;
   @override
   final double? pressureIn;
   @override
-  final int? precipMm;
+  final double? precipMm;
   @override
-  final int? precipIn;
+  final double? precipIn;
   @override
   final int? cloud;
   @override
   final double? feelslikeF;
   @override
-  final int? visKm;
+  final double? visKm;
   @override
-  final int? visMiles;
+  final double? visMiles;
   @override
-  final int? uv;
+  final double? uv;
   @override
   final double? gustMph;
   @override
@@ -611,15 +611,15 @@ abstract class _CurrentDto implements CurrentDto {
       final double? tempF,
       final int? isDay,
       final double? windMph,
-      final int? pressureMb,
+      final double? pressureMb,
       final double? pressureIn,
-      final int? precipMm,
-      final int? precipIn,
+      final double? precipMm,
+      final double? precipIn,
       final int? cloud,
       final double? feelslikeF,
-      final int? visKm,
-      final int? visMiles,
-      final int? uv,
+      final double? visKm,
+      final double? visMiles,
+      final double? uv,
       final double? gustMph,
       final double? gustKph,
       final AirQualityDto? airQuality}) = _$_CurrentDto;
@@ -652,23 +652,23 @@ abstract class _CurrentDto implements CurrentDto {
   @override
   double? get windMph;
   @override
-  int? get pressureMb;
+  double? get pressureMb;
   @override
   double? get pressureIn;
   @override
-  int? get precipMm;
+  double? get precipMm;
   @override
-  int? get precipIn;
+  double? get precipIn;
   @override
   int? get cloud;
   @override
   double? get feelslikeF;
   @override
-  int? get visKm;
+  double? get visKm;
   @override
-  int? get visMiles;
+  double? get visMiles;
   @override
-  int? get uv;
+  double? get uv;
   @override
   double? get gustMph;
   @override

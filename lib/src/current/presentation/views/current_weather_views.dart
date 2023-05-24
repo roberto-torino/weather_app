@@ -12,6 +12,8 @@ extension CurrentWeatherViews on CurrentWeather {
         return Icons.sunny;
       case 'Snowing':
         return Icons.cloudy_snowing;
+      case 'Moderate or heavy rain with thunder':
+        return Icons.thunderstorm;
       default:
         return Icons.question_mark;
     }
