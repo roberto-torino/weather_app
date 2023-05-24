@@ -7,7 +7,7 @@ part 'condition_dto.g.dart';
 @freezed
 class ConditionDto with _$ConditionDto {
   const factory ConditionDto({
-    String? text,
+    required String text,
     String? icon,
     int? code,
   }) = _ConditionDto;

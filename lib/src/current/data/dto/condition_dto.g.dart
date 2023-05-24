@@ -12,7 +12,7 @@ _$_ConditionDto _$$_ConditionDtoFromJson(Map<String, dynamic> json) =>
       json,
       ($checkedConvert) {
         final val = _$_ConditionDto(
-          text: $checkedConvert('text', (v) => v as String?),
+          text: $checkedConvert('text', (v) => v as String),
           icon: $checkedConvert('icon', (v) => v as String?),
           code: $checkedConvert('code', (v) => v as int?),
         );

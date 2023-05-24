@@ -20,23 +20,23 @@ CurrentDto _$CurrentDtoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CurrentDto {
+  DateTime get lastUpdated => throw _privateConstructorUsedError;
+  ConditionDto get condition => throw _privateConstructorUsedError;
+  int get humidity => throw _privateConstructorUsedError;
+  double get tempC => throw _privateConstructorUsedError;
+  double get feelslikeC => throw _privateConstructorUsedError;
+  double get windKph => throw _privateConstructorUsedError;
+  int get windDegree => throw _privateConstructorUsedError;
+  String? get windDir => throw _privateConstructorUsedError;
   int? get lastUpdatedEpoch => throw _privateConstructorUsedError;
-  DateTime? get lastUpdated => throw _privateConstructorUsedError;
-  double? get tempC => throw _privateConstructorUsedError;
   double? get tempF => throw _privateConstructorUsedError;
   int? get isDay => throw _privateConstructorUsedError;
-  ConditionDto? get condition => throw _privateConstructorUsedError;
   double? get windMph => throw _privateConstructorUsedError;
-  double? get windKph => throw _privateConstructorUsedError;
-  int? get windDegree => throw _privateConstructorUsedError;
-  String? get windDir => throw _privateConstructorUsedError;
   int? get pressureMb => throw _privateConstructorUsedError;
   double? get pressureIn => throw _privateConstructorUsedError;
   int? get precipMm => throw _privateConstructorUsedError;
   int? get precipIn => throw _privateConstructorUsedError;
-  int? get humidity => throw _privateConstructorUsedError;
   int? get cloud => throw _privateConstructorUsedError;
-  double? get feelslikeC => throw _privateConstructorUsedError;
   double? get feelslikeF => throw _privateConstructorUsedError;
   int? get visKm => throw _privateConstructorUsedError;
   int? get visMiles => throw _privateConstructorUsedError;
@@ -58,23 +58,23 @@ abstract class $CurrentDtoCopyWith<$Res> {
       _$CurrentDtoCopyWithImpl<$Res, CurrentDto>;
   @useResult
   $Res call(
-      {int? lastUpdatedEpoch,
-      DateTime? lastUpdated,
-      double? tempC,
+      {DateTime lastUpdated,
+      ConditionDto condition,
+      int humidity,
+      double tempC,
+      double feelslikeC,
+      double windKph,
+      int windDegree,
+      String? windDir,
+      int? lastUpdatedEpoch,
       double? tempF,
       int? isDay,
-      ConditionDto? condition,
       double? windMph,
-      double? windKph,
-      int? windDegree,
-      String? windDir,
       int? pressureMb,
       double? pressureIn,
       int? precipMm,
       int? precipIn,
-      int? humidity,
       int? cloud,
-      double? feelslikeC,
       double? feelslikeF,
       int? visKm,
       int? visMiles,
@@ -83,7 +83,7 @@ abstract class $CurrentDtoCopyWith<$Res> {
       double? gustKph,
       AirQualityDto? airQuality});
 
-  $ConditionDtoCopyWith<$Res>? get condition;
+  $ConditionDtoCopyWith<$Res> get condition;
   $AirQualityDtoCopyWith<$Res>? get airQuality;
 }
 
@@ -100,23 +100,23 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? lastUpdated = null,
+    Object? condition = null,
+    Object? humidity = null,
+    Object? tempC = null,
+    Object? feelslikeC = null,
+    Object? windKph = null,
+    Object? windDegree = null,
+    Object? windDir = freezed,
     Object? lastUpdatedEpoch = freezed,
-    Object? lastUpdated = freezed,
-    Object? tempC = freezed,
     Object? tempF = freezed,
     Object? isDay = freezed,
-    Object? condition = freezed,
     Object? windMph = freezed,
-    Object? windKph = freezed,
-    Object? windDegree = freezed,
-    Object? windDir = freezed,
     Object? pressureMb = freezed,
     Object? pressureIn = freezed,
     Object? precipMm = freezed,
     Object? precipIn = freezed,
-    Object? humidity = freezed,
     Object? cloud = freezed,
-    Object? feelslikeC = freezed,
     Object? feelslikeF = freezed,
     Object? visKm = freezed,
     Object? visMiles = freezed,
@@ -126,18 +126,42 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
     Object? airQuality = freezed,
   }) {
     return _then(_value.copyWith(
+      lastUpdated: null == lastUpdated
+          ? _value.lastUpdated
+          : lastUpdated // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      condition: null == condition
+          ? _value.condition
+          : condition // ignore: cast_nullable_to_non_nullable
+              as ConditionDto,
+      humidity: null == humidity
+          ? _value.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as int,
+      tempC: null == tempC
+          ? _value.tempC
+          : tempC // ignore: cast_nullable_to_non_nullable
+              as double,
+      feelslikeC: null == feelslikeC
+          ? _value.feelslikeC
+          : feelslikeC // ignore: cast_nullable_to_non_nullable
+              as double,
+      windKph: null == windKph
+          ? _value.windKph
+          : windKph // ignore: cast_nullable_to_non_nullable
+              as double,
+      windDegree: null == windDegree
+          ? _value.windDegree
+          : windDegree // ignore: cast_nullable_to_non_nullable
+              as int,
+      windDir: freezed == windDir
+          ? _value.windDir
+          : windDir // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastUpdatedEpoch: freezed == lastUpdatedEpoch
           ? _value.lastUpdatedEpoch
           : lastUpdatedEpoch // ignore: cast_nullable_to_non_nullable
               as int?,
-      lastUpdated: freezed == lastUpdated
-          ? _value.lastUpdated
-          : lastUpdated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      tempC: freezed == tempC
-          ? _value.tempC
-          : tempC // ignore: cast_nullable_to_non_nullable
-              as double?,
       tempF: freezed == tempF
           ? _value.tempF
           : tempF // ignore: cast_nullable_to_non_nullable
@@ -146,26 +170,10 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
           ? _value.isDay
           : isDay // ignore: cast_nullable_to_non_nullable
               as int?,
-      condition: freezed == condition
-          ? _value.condition
-          : condition // ignore: cast_nullable_to_non_nullable
-              as ConditionDto?,
       windMph: freezed == windMph
           ? _value.windMph
           : windMph // ignore: cast_nullable_to_non_nullable
               as double?,
-      windKph: freezed == windKph
-          ? _value.windKph
-          : windKph // ignore: cast_nullable_to_non_nullable
-              as double?,
-      windDegree: freezed == windDegree
-          ? _value.windDegree
-          : windDegree // ignore: cast_nullable_to_non_nullable
-              as int?,
-      windDir: freezed == windDir
-          ? _value.windDir
-          : windDir // ignore: cast_nullable_to_non_nullable
-              as String?,
       pressureMb: freezed == pressureMb
           ? _value.pressureMb
           : pressureMb // ignore: cast_nullable_to_non_nullable
@@ -182,18 +190,10 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
           ? _value.precipIn
           : precipIn // ignore: cast_nullable_to_non_nullable
               as int?,
-      humidity: freezed == humidity
-          ? _value.humidity
-          : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
       cloud: freezed == cloud
           ? _value.cloud
           : cloud // ignore: cast_nullable_to_non_nullable
               as int?,
-      feelslikeC: freezed == feelslikeC
-          ? _value.feelslikeC
-          : feelslikeC // ignore: cast_nullable_to_non_nullable
-              as double?,
       feelslikeF: freezed == feelslikeF
           ? _value.feelslikeF
           : feelslikeF // ignore: cast_nullable_to_non_nullable
@@ -227,12 +227,8 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
 
   @override
   @pragma('vm:prefer-inline')
-  $ConditionDtoCopyWith<$Res>? get condition {
-    if (_value.condition == null) {
-      return null;
-    }
-
-    return $ConditionDtoCopyWith<$Res>(_value.condition!, (value) {
+  $ConditionDtoCopyWith<$Res> get condition {
+    return $ConditionDtoCopyWith<$Res>(_value.condition, (value) {
       return _then(_value.copyWith(condition: value) as $Val);
     });
   }
@@ -259,23 +255,23 @@ abstract class _$$_CurrentDtoCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? lastUpdatedEpoch,
-      DateTime? lastUpdated,
-      double? tempC,
+      {DateTime lastUpdated,
+      ConditionDto condition,
+      int humidity,
+      double tempC,
+      double feelslikeC,
+      double windKph,
+      int windDegree,
+      String? windDir,
+      int? lastUpdatedEpoch,
       double? tempF,
       int? isDay,
-      ConditionDto? condition,
       double? windMph,
-      double? windKph,
-      int? windDegree,
-      String? windDir,
       int? pressureMb,
       double? pressureIn,
       int? precipMm,
       int? precipIn,
-      int? humidity,
       int? cloud,
-      double? feelslikeC,
       double? feelslikeF,
       int? visKm,
       int? visMiles,
@@ -285,7 +281,7 @@ abstract class _$$_CurrentDtoCopyWith<$Res>
       AirQualityDto? airQuality});
 
   @override
-  $ConditionDtoCopyWith<$Res>? get condition;
+  $ConditionDtoCopyWith<$Res> get condition;
   @override
   $AirQualityDtoCopyWith<$Res>? get airQuality;
 }
@@ -301,23 +297,23 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? lastUpdated = null,
+    Object? condition = null,
+    Object? humidity = null,
+    Object? tempC = null,
+    Object? feelslikeC = null,
+    Object? windKph = null,
+    Object? windDegree = null,
+    Object? windDir = freezed,
     Object? lastUpdatedEpoch = freezed,
-    Object? lastUpdated = freezed,
-    Object? tempC = freezed,
     Object? tempF = freezed,
     Object? isDay = freezed,
-    Object? condition = freezed,
     Object? windMph = freezed,
-    Object? windKph = freezed,
-    Object? windDegree = freezed,
-    Object? windDir = freezed,
     Object? pressureMb = freezed,
     Object? pressureIn = freezed,
     Object? precipMm = freezed,
     Object? precipIn = freezed,
-    Object? humidity = freezed,
     Object? cloud = freezed,
-    Object? feelslikeC = freezed,
     Object? feelslikeF = freezed,
     Object? visKm = freezed,
     Object? visMiles = freezed,
@@ -327,18 +323,42 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
     Object? airQuality = freezed,
   }) {
     return _then(_$_CurrentDto(
+      lastUpdated: null == lastUpdated
+          ? _value.lastUpdated
+          : lastUpdated // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      condition: null == condition
+          ? _value.condition
+          : condition // ignore: cast_nullable_to_non_nullable
+              as ConditionDto,
+      humidity: null == humidity
+          ? _value.humidity
+          : humidity // ignore: cast_nullable_to_non_nullable
+              as int,
+      tempC: null == tempC
+          ? _value.tempC
+          : tempC // ignore: cast_nullable_to_non_nullable
+              as double,
+      feelslikeC: null == feelslikeC
+          ? _value.feelslikeC
+          : feelslikeC // ignore: cast_nullable_to_non_nullable
+              as double,
+      windKph: null == windKph
+          ? _value.windKph
+          : windKph // ignore: cast_nullable_to_non_nullable
+              as double,
+      windDegree: null == windDegree
+          ? _value.windDegree
+          : windDegree // ignore: cast_nullable_to_non_nullable
+              as int,
+      windDir: freezed == windDir
+          ? _value.windDir
+          : windDir // ignore: cast_nullable_to_non_nullable
+              as String?,
       lastUpdatedEpoch: freezed == lastUpdatedEpoch
           ? _value.lastUpdatedEpoch
           : lastUpdatedEpoch // ignore: cast_nullable_to_non_nullable
               as int?,
-      lastUpdated: freezed == lastUpdated
-          ? _value.lastUpdated
-          : lastUpdated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      tempC: freezed == tempC
-          ? _value.tempC
-          : tempC // ignore: cast_nullable_to_non_nullable
-              as double?,
       tempF: freezed == tempF
           ? _value.tempF
           : tempF // ignore: cast_nullable_to_non_nullable
@@ -347,26 +367,10 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
           ? _value.isDay
           : isDay // ignore: cast_nullable_to_non_nullable
               as int?,
-      condition: freezed == condition
-          ? _value.condition
-          : condition // ignore: cast_nullable_to_non_nullable
-              as ConditionDto?,
       windMph: freezed == windMph
           ? _value.windMph
           : windMph // ignore: cast_nullable_to_non_nullable
               as double?,
-      windKph: freezed == windKph
-          ? _value.windKph
-          : windKph // ignore: cast_nullable_to_non_nullable
-              as double?,
-      windDegree: freezed == windDegree
-          ? _value.windDegree
-          : windDegree // ignore: cast_nullable_to_non_nullable
-              as int?,
-      windDir: freezed == windDir
-          ? _value.windDir
-          : windDir // ignore: cast_nullable_to_non_nullable
-              as String?,
       pressureMb: freezed == pressureMb
           ? _value.pressureMb
           : pressureMb // ignore: cast_nullable_to_non_nullable
@@ -383,18 +387,10 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
           ? _value.precipIn
           : precipIn // ignore: cast_nullable_to_non_nullable
               as int?,
-      humidity: freezed == humidity
-          ? _value.humidity
-          : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
       cloud: freezed == cloud
           ? _value.cloud
           : cloud // ignore: cast_nullable_to_non_nullable
               as int?,
-      feelslikeC: freezed == feelslikeC
-          ? _value.feelslikeC
-          : feelslikeC // ignore: cast_nullable_to_non_nullable
-              as double?,
       feelslikeF: freezed == feelslikeF
           ? _value.feelslikeF
           : feelslikeF // ignore: cast_nullable_to_non_nullable
@@ -431,23 +427,23 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CurrentDto implements _CurrentDto {
   const _$_CurrentDto(
-      {this.lastUpdatedEpoch,
-      this.lastUpdated,
-      this.tempC,
+      {required this.lastUpdated,
+      required this.condition,
+      required this.humidity,
+      required this.tempC,
+      required this.feelslikeC,
+      required this.windKph,
+      required this.windDegree,
+      this.windDir,
+      this.lastUpdatedEpoch,
       this.tempF,
       this.isDay,
-      this.condition,
       this.windMph,
-      this.windKph,
-      this.windDegree,
-      this.windDir,
       this.pressureMb,
       this.pressureIn,
       this.precipMm,
       this.precipIn,
-      this.humidity,
       this.cloud,
-      this.feelslikeC,
       this.feelslikeF,
       this.visKm,
       this.visMiles,
@@ -460,25 +456,29 @@ class _$_CurrentDto implements _CurrentDto {
       _$$_CurrentDtoFromJson(json);
 
   @override
+  final DateTime lastUpdated;
+  @override
+  final ConditionDto condition;
+  @override
+  final int humidity;
+  @override
+  final double tempC;
+  @override
+  final double feelslikeC;
+  @override
+  final double windKph;
+  @override
+  final int windDegree;
+  @override
+  final String? windDir;
+  @override
   final int? lastUpdatedEpoch;
-  @override
-  final DateTime? lastUpdated;
-  @override
-  final double? tempC;
   @override
   final double? tempF;
   @override
   final int? isDay;
   @override
-  final ConditionDto? condition;
-  @override
   final double? windMph;
-  @override
-  final double? windKph;
-  @override
-  final int? windDegree;
-  @override
-  final String? windDir;
   @override
   final int? pressureMb;
   @override
@@ -488,11 +488,7 @@ class _$_CurrentDto implements _CurrentDto {
   @override
   final int? precipIn;
   @override
-  final int? humidity;
-  @override
   final int? cloud;
-  @override
-  final double? feelslikeC;
   @override
   final double? feelslikeF;
   @override
@@ -510,7 +506,7 @@ class _$_CurrentDto implements _CurrentDto {
 
   @override
   String toString() {
-    return 'CurrentDto(lastUpdatedEpoch: $lastUpdatedEpoch, lastUpdated: $lastUpdated, tempC: $tempC, tempF: $tempF, isDay: $isDay, condition: $condition, windMph: $windMph, windKph: $windKph, windDegree: $windDegree, windDir: $windDir, pressureMb: $pressureMb, pressureIn: $pressureIn, precipMm: $precipMm, precipIn: $precipIn, humidity: $humidity, cloud: $cloud, feelslikeC: $feelslikeC, feelslikeF: $feelslikeF, visKm: $visKm, visMiles: $visMiles, uv: $uv, gustMph: $gustMph, gustKph: $gustKph, airQuality: $airQuality)';
+    return 'CurrentDto(lastUpdated: $lastUpdated, condition: $condition, humidity: $humidity, tempC: $tempC, feelslikeC: $feelslikeC, windKph: $windKph, windDegree: $windDegree, windDir: $windDir, lastUpdatedEpoch: $lastUpdatedEpoch, tempF: $tempF, isDay: $isDay, windMph: $windMph, pressureMb: $pressureMb, pressureIn: $pressureIn, precipMm: $precipMm, precipIn: $precipIn, cloud: $cloud, feelslikeF: $feelslikeF, visKm: $visKm, visMiles: $visMiles, uv: $uv, gustMph: $gustMph, gustKph: $gustKph, airQuality: $airQuality)';
   }
 
   @override
@@ -518,20 +514,24 @@ class _$_CurrentDto implements _CurrentDto {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CurrentDto &&
-            (identical(other.lastUpdatedEpoch, lastUpdatedEpoch) ||
-                other.lastUpdatedEpoch == lastUpdatedEpoch) &&
             (identical(other.lastUpdated, lastUpdated) ||
                 other.lastUpdated == lastUpdated) &&
-            (identical(other.tempC, tempC) || other.tempC == tempC) &&
-            (identical(other.tempF, tempF) || other.tempF == tempF) &&
-            (identical(other.isDay, isDay) || other.isDay == isDay) &&
             (identical(other.condition, condition) ||
                 other.condition == condition) &&
-            (identical(other.windMph, windMph) || other.windMph == windMph) &&
+            (identical(other.humidity, humidity) ||
+                other.humidity == humidity) &&
+            (identical(other.tempC, tempC) || other.tempC == tempC) &&
+            (identical(other.feelslikeC, feelslikeC) ||
+                other.feelslikeC == feelslikeC) &&
             (identical(other.windKph, windKph) || other.windKph == windKph) &&
             (identical(other.windDegree, windDegree) ||
                 other.windDegree == windDegree) &&
             (identical(other.windDir, windDir) || other.windDir == windDir) &&
+            (identical(other.lastUpdatedEpoch, lastUpdatedEpoch) ||
+                other.lastUpdatedEpoch == lastUpdatedEpoch) &&
+            (identical(other.tempF, tempF) || other.tempF == tempF) &&
+            (identical(other.isDay, isDay) || other.isDay == isDay) &&
+            (identical(other.windMph, windMph) || other.windMph == windMph) &&
             (identical(other.pressureMb, pressureMb) ||
                 other.pressureMb == pressureMb) &&
             (identical(other.pressureIn, pressureIn) ||
@@ -540,11 +540,7 @@ class _$_CurrentDto implements _CurrentDto {
                 other.precipMm == precipMm) &&
             (identical(other.precipIn, precipIn) ||
                 other.precipIn == precipIn) &&
-            (identical(other.humidity, humidity) ||
-                other.humidity == humidity) &&
             (identical(other.cloud, cloud) || other.cloud == cloud) &&
-            (identical(other.feelslikeC, feelslikeC) ||
-                other.feelslikeC == feelslikeC) &&
             (identical(other.feelslikeF, feelslikeF) ||
                 other.feelslikeF == feelslikeF) &&
             (identical(other.visKm, visKm) || other.visKm == visKm) &&
@@ -561,23 +557,23 @@ class _$_CurrentDto implements _CurrentDto {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        lastUpdatedEpoch,
         lastUpdated,
-        tempC,
-        tempF,
-        isDay,
         condition,
-        windMph,
+        humidity,
+        tempC,
+        feelslikeC,
         windKph,
         windDegree,
         windDir,
+        lastUpdatedEpoch,
+        tempF,
+        isDay,
+        windMph,
         pressureMb,
         pressureIn,
         precipMm,
         precipIn,
-        humidity,
         cloud,
-        feelslikeC,
         feelslikeF,
         visKm,
         visMiles,
@@ -603,23 +599,23 @@ class _$_CurrentDto implements _CurrentDto {
 
 abstract class _CurrentDto implements CurrentDto {
   const factory _CurrentDto(
-      {final int? lastUpdatedEpoch,
-      final DateTime? lastUpdated,
-      final double? tempC,
+      {required final DateTime lastUpdated,
+      required final ConditionDto condition,
+      required final int humidity,
+      required final double tempC,
+      required final double feelslikeC,
+      required final double windKph,
+      required final int windDegree,
+      final String? windDir,
+      final int? lastUpdatedEpoch,
       final double? tempF,
       final int? isDay,
-      final ConditionDto? condition,
       final double? windMph,
-      final double? windKph,
-      final int? windDegree,
-      final String? windDir,
       final int? pressureMb,
       final double? pressureIn,
       final int? precipMm,
       final int? precipIn,
-      final int? humidity,
       final int? cloud,
-      final double? feelslikeC,
       final double? feelslikeF,
       final int? visKm,
       final int? visMiles,
@@ -632,25 +628,29 @@ abstract class _CurrentDto implements CurrentDto {
       _$_CurrentDto.fromJson;
 
   @override
+  DateTime get lastUpdated;
+  @override
+  ConditionDto get condition;
+  @override
+  int get humidity;
+  @override
+  double get tempC;
+  @override
+  double get feelslikeC;
+  @override
+  double get windKph;
+  @override
+  int get windDegree;
+  @override
+  String? get windDir;
+  @override
   int? get lastUpdatedEpoch;
-  @override
-  DateTime? get lastUpdated;
-  @override
-  double? get tempC;
   @override
   double? get tempF;
   @override
   int? get isDay;
   @override
-  ConditionDto? get condition;
-  @override
   double? get windMph;
-  @override
-  double? get windKph;
-  @override
-  int? get windDegree;
-  @override
-  String? get windDir;
   @override
   int? get pressureMb;
   @override
@@ -660,11 +660,7 @@ abstract class _CurrentDto implements CurrentDto {
   @override
   int? get precipIn;
   @override
-  int? get humidity;
-  @override
   int? get cloud;
-  @override
-  double? get feelslikeC;
   @override
   double? get feelslikeF;
   @override

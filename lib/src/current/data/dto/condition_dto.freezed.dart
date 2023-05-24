@@ -20,7 +20,7 @@ ConditionDto _$ConditionDtoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConditionDto {
-  String? get text => throw _privateConstructorUsedError;
+  String get text => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   int? get code => throw _privateConstructorUsedError;
 
@@ -36,7 +36,7 @@ abstract class $ConditionDtoCopyWith<$Res> {
           ConditionDto value, $Res Function(ConditionDto) then) =
       _$ConditionDtoCopyWithImpl<$Res, ConditionDto>;
   @useResult
-  $Res call({String? text, String? icon, int? code});
+  $Res call({String text, String? icon, int? code});
 }
 
 /// @nodoc
@@ -52,15 +52,15 @@ class _$ConditionDtoCopyWithImpl<$Res, $Val extends ConditionDto>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = freezed,
+    Object? text = null,
     Object? icon = freezed,
     Object? code = freezed,
   }) {
     return _then(_value.copyWith(
-      text: freezed == text
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -81,7 +81,7 @@ abstract class _$$_ConditionDtoCopyWith<$Res>
       __$$_ConditionDtoCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? text, String? icon, int? code});
+  $Res call({String text, String? icon, int? code});
 }
 
 /// @nodoc
@@ -95,15 +95,15 @@ class __$$_ConditionDtoCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = freezed,
+    Object? text = null,
     Object? icon = freezed,
     Object? code = freezed,
   }) {
     return _then(_$_ConditionDto(
-      text: freezed == text
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       icon: freezed == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -119,13 +119,13 @@ class __$$_ConditionDtoCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConditionDto implements _ConditionDto {
-  const _$_ConditionDto({this.text, this.icon, this.code});
+  const _$_ConditionDto({required this.text, this.icon, this.code});
 
   factory _$_ConditionDto.fromJson(Map<String, dynamic> json) =>
       _$$_ConditionDtoFromJson(json);
 
   @override
-  final String? text;
+  final String text;
   @override
   final String? icon;
   @override
@@ -166,7 +166,7 @@ class _$_ConditionDto implements _ConditionDto {
 
 abstract class _ConditionDto implements ConditionDto {
   const factory _ConditionDto(
-      {final String? text,
+      {required final String text,
       final String? icon,
       final int? code}) = _$_ConditionDto;
 
@@ -174,7 +174,7 @@ abstract class _ConditionDto implements ConditionDto {
       _$_ConditionDto.fromJson;
 
   @override
-  String? get text;
+  String get text;
   @override
   String? get icon;
   @override
