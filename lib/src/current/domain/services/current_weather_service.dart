@@ -1,9 +1,9 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../search/domain/entities/weather_location.dart';
 import '../../data/repositories/current_repository.dart';
 import '../adapter/current_weather_dto_adapter.dart';
 import '../entities/current_weather.dart';
-import '../entities/weather_location.dart';
 
 part 'current_weather_service.g.dart';
 

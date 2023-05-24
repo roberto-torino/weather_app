@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../domain/entities/weather_location.dart';
+import '../../../search/domain/entities/weather_location.dart';
 
 part 'wheater_location_state.g.dart';
 
