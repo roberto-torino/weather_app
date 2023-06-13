@@ -21,7 +21,6 @@ class CurrentApi {
       '/current.json',
       queryParameters: {'q': q},
     );
-
     return result.data!;
   }
 }

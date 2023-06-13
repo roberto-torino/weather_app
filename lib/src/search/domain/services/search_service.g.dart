@@ -1,25 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'current_weather_state.dart';
+part of 'search_service.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$currentWeatherHash() => r'8ba494031d88d61a51186533498f53f7a82e2736';
+String _$searchServiceHash() => r'58c9513504c86f5bb5e2dd42c2853d96b8c3b4b4';
 
-/// See also [currentWeather].
-@ProviderFor(currentWeather)
-final currentWeatherProvider =
-    AutoDisposeFutureProvider<CurrentWeather>.internal(
-  currentWeather,
-  name: r'currentWeatherProvider',
+/// See also [searchService].
+@ProviderFor(searchService)
+final searchServiceProvider = AutoDisposeProvider<SearchService>.internal(
+  searchService,
+  name: r'searchServiceProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$currentWeatherHash,
+      : _$searchServiceHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef CurrentWeatherRef = AutoDisposeFutureProviderRef<CurrentWeather>;
+typedef SearchServiceRef = AutoDisposeProviderRef<SearchService>;
 // ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions

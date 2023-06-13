@@ -12,5 +12,3 @@ void main() {
     ),
   );
 }
-
-void f() {}

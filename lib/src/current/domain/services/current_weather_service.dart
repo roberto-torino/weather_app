@@ -19,7 +19,6 @@ class CurrentWeatherService {
 
   Future<CurrentWeather> getCurrentWheater(WeatherLocation location) async {
     final result = await repository.currentWeather(location.cityName);
-
     return result.toDomain();
   }
 }
